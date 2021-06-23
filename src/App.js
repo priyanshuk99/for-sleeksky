@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css"
+import Header from './components/header';
+import Logo from "./components/logo";
+import SideBar from "./components/sidebar";
+import Footer from "./components/footer";
+import Content from "./components/content";
+import { CountProvider } from './countcontext'
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <CountProvider>
+      <div className='app'>
+        <div className='col-1-row'>
+          <div className='logo'>
+            <Logo />
+          </div>
+          <div className='sidebar'>
+            <SideBar />
+          </div>
+        </div>
+        <div className='col-2-row'>
+          <div className='header'>
+            <Header />
+          </div>
+          <div className='content'>
+            <Content />
+          </div>
+          <div className='footer'>
+            <Footer />
+          </div>
+        </div>
+      </div>
+    </CountProvider>
   );
 }
 

@@ -1,38 +1,85 @@
-.App {
-  text-align: center;
+.app {
+  display: flex;
+  flex-direction: row;
+  background-color: #ebebeb;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.col-1-row {
+  width: 100px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  background-color: rgb(220, 220, 220);
+}
+.col-2-row {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(235, 235, 235, 0.733);
+}
+
+.logo {
+  height: 100px;
+  width: 100px;
+  border: 0.5px;
+  border-style: groove;
+  border-color: #ebebeb;
+}
+.logoimg {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.sidebar {
+  height: 100vh;
+  border: 0.5px;
+  border-style: groove;
+  border-color: #ebebeb;
+  background-color: rgb(220, 220, 220);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header {
+  flex: 0 0 100px;
+  font-size: larger;
+  text-align: right;
+  border: 0.5px;
+  border-style: groove;
+  border-color: #ebebeb;
+  background-color: rgb(220, 220, 220);
+}
+.live-time {
+  margin-right: 50px;
+}
+.content {
+  height: 100vh;
+  background-color: rgb(220, 220, 220);
+  border: 0.5px;
+  border-style: groove;
+  border-color: #ebebeb;
+  overflow-y: scroll;
+}
+.footer {
+  display: flex;
+  flex: 0 0 100px;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  background-color: rgb(220, 220, 220);
+  border: 0.5px;
+  border-style: groove;
+  border-color: #ebebeb;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+  font-weight: 700;
+}
+.clickbox {
+  display: block;
+  background-color: rgb(36, 169, 174);
+  height: 60px;
+  width: 90px;
+  margin: 20px 2.5px 2.5px 2.5px;
 }
